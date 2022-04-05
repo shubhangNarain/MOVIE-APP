@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #90cfb5;
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    background-color: #ace6ce;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid #54f5b2;
+    border-radius: 50px;
+    color: black;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder{
+    color: #303f39
+}
+
+.search{
+    background-color: #54f5b2;
+    outline: none;
+}
+
+.movie{
+    background-color: #ace6ce;
+    border-radius: 3px;
+    position: relative;
+    overflow: auto;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    width: 270px;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 1px;
+}
+
+.movie-into h3{
+    margin: 0;
+}
+
+.movie-info span{
+    background-color: #2e614c;  
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: green;
+}
+
+.movie-info span.orange{
+    color: orange;
+}
+
+.movie-info span.red{
+    color: red
+}
+
+.overview{
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 50%;
+    overflow: auto;
+    bottom: 0;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
